@@ -3,9 +3,10 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:todo_bloc/screens/tab_screen.dart';
 import 'package:todo_bloc/services/app_router.dart';
+import 'package:todo_bloc/services/app_theme.dart';
 
-import '../screens/tasks_screen.dart';
 import 'blocs/bloc_exports.dart';
 
 void main() async {
@@ -34,15 +35,26 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => TasksBloc(),
-      child: MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.grey,
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => TasksBloc(),
         ),
-        home: const TasksScreen(),
-        onGenerateRoute: appRouter.onGenerateRoute,
+        BlocProvider(
+          create: (context) => SwitchBloc(),
+        ),
+      ],
+      child: BlocBuilder<SwitchBloc, SwitchState>(
+        builder: (context, state) {
+          return MaterialApp(
+            title: 'Flutter Demo',
+            theme: state.switchValue
+                ? AppThemes.appThemeData[AppTheme.darkTheme]
+                : AppThemes.appThemeData[AppTheme.lightTheme],
+            home: const TabScreen(),
+            onGenerateRoute: appRouter.onGenerateRoute,
+          );
+        },
       ),
     );
   }
