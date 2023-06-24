@@ -29,7 +29,7 @@ Clone this repository and import it into your **Android IDE**
 ```bash
 https://github.com/hexfa/task_checklist.git
 ```
-## Resources ℹ️
+## Resources 
 
 - #### Remote API
   ```bash
