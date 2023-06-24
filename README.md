@@ -3,7 +3,6 @@
 - [Details](#details)
 - [Features](#features)
 - [Lets Start](#lets-start)
-- [Usage](#usage)
 - [Prerequisites](#prerequisites)
 - [Dependencies](#dependencies)
 - [Contributing](#contributing)
