@@ -8,12 +8,12 @@
 - [Dependencies](#dependencies)
 - [Contributing](#contributing)
   
-## Details 📜
+## Details 
 Task Check List App is a simple task management application built with Flutter. It helps you stay organized by allowing you to create and manage your daily tasks effectively.
 
 
 
-## Features 🚩
+## Features 
 
 - Task Creation: Create new tasks with a title, description, and due date.
 - Task Organization: Categorize tasks into different lists or categories for better management.
@@ -24,7 +24,7 @@ Task Check List App is a simple task management application built with Flutter. 
 - Task Deletion: Easily delete completed or unnecessary tasks to declutter your task list.
 - User-Friendly Interface: Intuitive and easy-to-use interface for smooth task management.
 
-## Lets Start 🕺
+## Lets Start 
 
 Clone this repository and import it into your **Android IDE**
 ```bash
